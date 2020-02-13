@@ -1,0 +1,74 @@
+1.   <<<20?>>> 
+    The first few days of the second week I read the book trying to learn
+    about CLEmitter. I also read chapter 1 and a bit of chapter 5 to learn 
+    about byte code and how GenIsFactorial was made. I mostly worked on
+    problem 1 until Thursday and Friday where I did the rest of the problems.
+
+2.  <<<3>>>
+    I mainly had difficult with problem 1 because I knew about CLEmitter 
+    before. The rest of the problems were very straight forward especially
+    with the example of implementing '/'. 
+
+3.  Problem 1 (Using CLEmitter): This was the problem I had the most diffulty
+    with and spent the most time on. I got confused at first from panicking 
+    I started late and got more confused reading the byte code. Specifically
+    the instruction invoke dynamic. cOffice hours helped and reading 
+    GenFactorial carefuly to what was different. Currently, it does compile 
+    and prints n. The main function branches do work since I got it to print 
+    prime and not Prime labels based if true or false but the problem seems 
+    to my isPrime function. For several different edits, it output false or 
+    true forboth prime and non-prime numbers except 2 and below.
+    
+    Problem 2 (Division Operator): I just followed the example from the 
+    compilation lecture and made a simple Divide.java file test it. I edited
+    to lexicalgrammer, grammer, TokenInfoCode, Scanner, JBinaryExpressions, 
+    and Parse.
+    
+    Problem 3 (Remainder Operator): This was also similar to problem 2. I 
+    just needed to look up a precedence table, add a case to Scanner, and 
+    look at appenedix D for the remainder instruction.
+    
+    Problem 4 (Shift Operator): Similar except I have to look at appenedix D
+    for precedence/level in grammer and I expanded on the cases '<' and '>' 
+    formore to determine when to shift. I had a little trouble testing until 
+    I realized I forgot to update one of the expressions and where it checks
+    after added new levels. 
+    
+    Example)
+    Before: conditionalAndExpression (lev 10) ::= equalityExpression (lev 6)
+    Now: conditionalAndExpression ::= inclusiveOrExpression (level 9)
+    
+    Problem 5 (Bitwise Operation): Also similar but I have to read appendix D
+    for their precdence levels, instructions, and what order to add them in 
+    grammer. Instead of editing JBinaryExpression, I added it's operator to
+    JUnaryExpression and read other functions for models. Bitwise not '~' 
+    threw me for a loop and tried XOR with 0 then SUB by 1 but I just misread 
+    the PDF. I XOR the output with -1 in the end.
+    
+    Problem 6 (Unary Plus Operation): After doing Bitwise Not, this was very
+    easy. I basically did the same thing.
+
+4.  Name        Status              Help Received
+    ----        ------              -------------
+    Derek       CS451 Classmate     I started the project a week 
+                                    late and asked if I needed to make 
+                                    IsPrime.java or if it provided in a 
+                                    panic. I realize now I didn't but I
+                                    made one anyway to look at the byte 
+                                    code in the pass directory which 
+                                    confused me more at the time.
+                                        
+    Swami       Professor           I came during office hours twice to ask
+                                    brief questions on problem 1. To return
+                                    true or false, I just have to return a 
+                                    constant 1 or 0. The second visit, I
+                                    was confused if I needed to invoke an
+                                    instance for isPrime like in factorial 
+                                    but was told I didn't need to cause
+                                    it was a static method.
+
+5.  Mostly easy project overall. I just shouldn't have started late. 
+    Going over CLEmitter in more detail or explaining where students can
+    look in the book would be more helpful. I enjoyed the project especially
+    problem 1 cause I was reading the book more and learned about CLEmitter.
+
