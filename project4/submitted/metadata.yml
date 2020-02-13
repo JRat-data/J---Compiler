@@ -1,0 +1,12 @@
+---
+:id: 24064196
+:submitters:
+- :name: Jonathan Ratsamy
+  :email: jonathan.ratsamy001@umb.edu
+:created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2019-11-06 17:12:37.325456000 Z
+  zone: !ruby/object:ActiveSupport::TimeZone
+    name: America/Los_Angeles
+  time: 2019-11-06 09:12:37.325456000 Z
+:status: processed
+:score: 120.0

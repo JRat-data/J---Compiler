@@ -1,0 +1,113 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<20>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<2>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Part I (Additions to JavaCC Scanner)
+
+   Problem 1 (Multiline Comment): This was the hardest one out of the part 1 
+   problems but not that difficult. I was a little stuck when some comments 
+   weren't being skipped until I read the MultiLineCommentX file. I didn't 
+   consider symbols inside the comment that would prevent skipping with my 
+   current code. I made sure to ignore instances "*" and "/" within the comment
+   until "*" is followed by "/".
+
+   Problem 2 (Reserved Words): Very simple. I just added to the reserved 
+   words lists and checked TokenInfo and what reserved words were already made.
+
+   Problem 3 (Operators): Similar to the previous problem. I had to check 
+   TokenInfo to see what I called each operator. Only mistake I made was 
+   adding DEC "--" when it was already there.
+   
+   Problem 4 (Separators): The easiet problem out of all the problems. I just
+   addec COLON ":".
+
+   Problem 5 (Literals): I added extra identifiers for +, -, e, E, d and D 
+   for Double Literal. For my approach I looked at the LiteralX.token file 
+   to see all the valid double and long literals to consider. What followed an 
+   exponent was either a digit or +/-. What I was stuck on were the instances 
+   where at least one digit had to be present. For example, a long literal 
+   has to have at least one digit followed by an l/L. It can't be an l/L by 
+   itself to be a long literal.
+
+   Part II (Additions to JavaCC Parser)
+   
+   Problem 6 (Long and Double Basic Types): Here I just added support 
+   for long and double in the basicType method.
+
+   Problem 7 (Operators): I added support for postincrement and predecrement 
+   in the statement method. I added the rest of the assign operators 
+   in assignmentExpression and added conditionalOrExpression, 
+   inclusiveOrExpression, exclusiveOrExpression, andExpression, and 
+   shiftExpression. I changed equalityExpression, relationalExpression, 
+   multiplicativeExpression, unaryExpression, simpleUnaryExpression, 
+   and postfixExpression to include the necessary operators. The only problem 
+   I ran into was putting "||" in conditionalAndExpression because of how 
+   I implemented it in Parser.java.
+   
+   Problem 8 (Conditional Expression): Similar issue to the previous problem.
+   Despite the syntax, I included this expression in conditionalAndExpression 
+   due to how I implemented it in Parser.java. 
+
+   Problem 9 (Switch Statement): I mainly followed how I approach this 
+   in Parser.java from the previous homework. I brute forced it using already 
+   existing statements as models for SWITCH, CASE, BREAK, and DEFLT (default). 
+   I also added extra varibles to follow what I did in Parser.java.
+
+   Problem 10 (Do-While Statement): Similar approach to the previous problem.
+   Simpler to implement though.
+
+   Problem 11 (For Statement): I had a bit of trouble with this problem. I 
+   wasn't using the LOOKAHEAD properly and I also had difficult names for 
+   variables that were either too similar to each other or too different 
+   from the names I used in Parser.java. I changed the names to differiantiate 
+   between them easier. 
+
+   Problem 12 (Exception Handlers): Using implementation in Parser.java, I 
+   edited statement to include TRY, CATCH, FINALLY, and THROW. I included 
+   THROWS in memberDecl and interfaceMemberDecl method. TRY was the only one 
+   that was a little tricky. I was following the syntax in the pdf and tried 
+   to follow FINALLY with a block but I used a statement in Parser.java. I also
+   wasn't checking for FINALLY properly and eventually used LOOKAHEAD.
+
+   Problem 13 (Interface Type Declaration): I used memberDecl, 
+   classDeclaration, and classBody as models. I followed the appendix in the 
+   end to make the necessary changes. I had a bit of trouble compiling it 
+   until I realized I should have been using an ArrayList<TypeName> instead 
+   Type superClass in interfaceDeclaration.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+    N/A                 N/A         N/A
+   ...                ...          ...
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+   I had to do some things differently from the syntax because of changes made 
+   to Parser.java and other files from the previous homework. I feel like this
+   made some implementation a little more difficult ecause I had to think 
+   differently or would get confuse why the syntax wasn't working with my code
+   exactly as it should. This potentially creates a false sense of difficulty
+   because if you didn't do well on the previous homework, the next homework 
+   could be more difficult. Granted though, I think this was one of the easier
+   homeworks despite there being more problems and my code not following syntax.
+   I was able to wrap my head around most of the problems fairly quickly and
+   did part I questions right away. Keep in mind, I work most of the week and 
+   I started this project two days before the due date because of the lack 
+   of free time in my schedule. I was still able to do most of the problems 
+   in a short amount of time. I had to do this too for the previous homework 
+   but this one was easier to approach. Maybe it's an accumulation of what
+   we've learned so far considering we did just take our first exam. 
+   ...
