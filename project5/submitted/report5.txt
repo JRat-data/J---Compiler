@@ -1,0 +1,122 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<168+>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<5>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Long and Double Basic Types): I've edited JArrayExpression, 
+   JArrayInitializer, JLiteralLong, JLiteralDouble, JBinaryExpression, 
+   JVariable, Context and Type. I use theappendix in the book to find what 
+   cases I need to add to the literal files while using LiteralInt as a model. 
+   I just added checks for Long and Double where Int was and added 
+   LLOAD/LSTORE and DLOAD/DSTORE there. I added a method in Context for the +2 
+   offset of Long and Double. Types for Long and Double, unboxed and boxed and 
+   descriptorFor in the Type file. Error Register 1/2 wrong type. I've checked 
+   several areas and checked the Piazza questions to see where I went wrong. So 
+   far I can't find the exact problem but it doesn't seem to areas mentioned on 
+   piazza especially when -pa and -v looks correct. Feedback/Critics would be 
+   apprecited.
+
+   Problem 2 (Operators): I mostly changed JAssignment, JBinaryExpression, 
+   JBooleanBinaryExpression, UnaryExpression, and Type. Checks for Long and 
+   Double added to analyze and codegen of several methods in UnaryExpression. 
+   Same for JAssignment, JBinaryExpression and JBooleanBinaryExpression. Of 
+   course while making these edits, I use the appendix in the back to check 
+   what I can and need to add. Solved.
+   
+   Problem 3 (Conditional Expression): Solved. I only edited analyze and codegen
+   of JTernaryOp in JTernaryExpression. For codegen, I just copied the codegen 
+   of JIfStatement without checking for null for the branching expressions. 
+   In analyze, I check if the first expression (condition) if it was a boolean.
+   For the second and third expressions, I checked to see if they were the same 
+   type as each other instead of checking if they're both integers. Then 
+   set type to second expression type.
+
+   Problem 4 (Switch Statement): Not Solved. I made changes to Parser and the 
+   respected SwitchStatement files. I've changed these around a lot try to get 
+   through it. I skipped this problem for a majority of my time spent on this 
+   project knowing it'll be the most difficult problem. I have no idea where 
+   to use the hint so I went about this with a different approach. I think
+   the error here lies in how I'm added labels to branch out too and should 
+   probably try a different approach. I started working on this towards the end
+   of the dealine and just decided to keep trying it out with this way and see 
+   if I can make progress. 
+
+   Problem 5 (Do-while Statement): Literal sought error possibly due to 
+   the same error from homework 3. I've made some edits to the respected file. 
+   Unfortunately I am unable to check if I edited codegen and analyze correctly.
+   Direction of error would be apprecited.
+
+   Problem 6 (For Statement): Literal sought error possibly due to 
+   the same error from homework 3. I've made some edits to the respected file. 
+   I also tried making changes to Parser.java where have(FOR) is to see if this 
+   was the case. Can't check corrected ness of codegen and analyze.
+   Direction of error would be apprecited.
+   
+   Problem 7 (Exception Handlers): Not Solved. I've made minor edits to 
+   JFinallyStatement and JCatchStatement. I focused most of attention on 
+   JTryStatement. 
+
+   Problem 8 (Interface Type Declarations): Not Solved. I've mainly edited 
+   JInterfaceDeclaration and tried editing Parser.java to see if anything there
+   was causing the NullPointerException. I use JClassDeclaration as model and 
+   try following it very closely. I also made minor changes to that file to 
+   see if the problem was cause by something there. This is the problem I spent
+   the second least amount of time.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+   Derek              Classmate    I just texted him asking what files he edited
+                                   for problem 1 to determine where my problem 
+                                   could be. He was also having the same issue. 
+                                   This was when I started the project. He 
+                                   misundstood what the register 1/2 wrong type
+                                   was exactly and was not any help with this 
+                                   problem.
+   ...                ...          ...
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+   
+   Quite a difficult project with a steep escalation in difficulty from the 
+   previous project. It was expected considering the amount of time we were 
+   given for this project. Part of the lack of commitment to this project on my
+   part was due to me being in the process trying to quit my job this time 
+   around. I can't say I learned much from this project and felt overwhelm 
+   looking at each file to see where I need to edit or where I went wrong on 
+   older projects. The less amount of instructions/guidance on this pdf also did
+   not help when looking for where I need to edit. When You instruction what 
+   files we need edit or not edit at all on the previous pdfs was a huge help 
+   to me. I did start this project late just like my other projects but this one
+   requirement my undivided attention even during our days off. 
+   
+   Like I commented on one of the previous projects, there is potential 
+   artificial difficulty for errors one makes on previous projects. This time, 
+   the issues I had on JForStatement and JDoWhileStatement from project 3 came 
+   back to haunt me on this project. I download the projects after they have 
+   been graded and when I checked project 3, there was no feedback at all to 
+   try to fix those errors. A potentially way to conduct these projects is 
+   how Ron Cheung gives projects for CS341 and CS444. When he gave projects,
+   He would tell students to either use their previously submitted project or 
+   the provided solution whenever we went on to the next project. Which was a 
+   way to give everyone a clean start for each project. But at the same time, 
+   this could potentially give students less incentive to learn certain projects
+   or try to cheat by posting solutions online or ask students from previous
+   semester. I believe he did say he would stop this if this became the case. 
+   In fact, I see similarities between how you and him conduct your course. He
+   does not take attendance which did make students show up to class less. You
+   do take attendance which gives students more incentive to come to class. 
+   Perhaps you two should talk to possibly improve student efficiency in your 
+   courses.
+   ...
