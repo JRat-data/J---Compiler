@@ -1,7 +1,7 @@
 # J---Compiler
 J-- compiler added to over the course of a semester
 
-In the submitted folder of each project is a .tar file. These are the final versions sumbited for each project. 
+In the submitted folder of each project is a .tar file. These are the final versions submited for each project. 
 The tests in the submitted folder were used to check the correctness of each project.
 
 The report#.txt file in each submitted folder states the files I edited, progress I made, and issues I ran into, etc. 
